@@ -17,14 +17,15 @@ data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) 
     }
 
     fun listarConteudos(){
-        println("Conteúdos da formacao $nome:")
+        println("Conteúdos da formação: $nome:")
         for ( c in conteudos) println("- ${c.nome}")
     }
 }
 
 fun main() {
     val conteudosKotlin = listOf(ConteudoEducacional("Introdução ao Kotlin", 20, Nivel.BASICO),
-        ConteudoEducacional("Controle de Fluxo", 10, Nivel.INTERMEDIARIO))
+        ConteudoEducacional("Controle de Fluxo", 10, Nivel.INTERMEDIARIO),
+        ConteudoEducacional("Módulo Avançado", 50, Nivel.AVANCADO))
 
     val formacaoKotlin = Formacao("Formação Kotlin", conteudosKotlin)
 
